@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grievance Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+</head>
+<body>
+<nav>
+  <a href="index.html">Submit &amp; Analyze</a>
+  <a href="similarity.html">Similar Complaints</a>
+  <a href="dashboard.html" class="active">Admin Dashboard</a>
+</nav>
+
+<div class="container">
+  <h1>Grievance Dashboard</h1>
+  <div class="subtitle">Live view across every complaint received so far.</div>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="num" id="statTotal">0</div><div class="lbl">Total</div></div>
+    <div class="stat"><div class="num" id="statHigh" style="color:var(--high)">0</div><div class="lbl">High</div></div>
+    <div class="stat"><div class="num" id="statMedium" style="color:var(--medium)">0</div><div class="lbl">Medium</div></div>
+    <div class="stat"><div class="num" id="statLow" style="color:var(--low)">0</div><div class="lbl">Low</div></div>
+  </div>
+
+  <div class="card">
+    <div class="label">Complaint Categories</div>
+    <canvas id="categoryChart" height="220"></canvas>
+  </div>
+
+  <div class="card">
+    <div class="label">Emerging Issues</div>
+    <button id="refreshIssuesBtn">Refresh</button>
+    <div id="issuesList" style="margin-top:0.75rem;"><div class="empty">No emerging issues detected yet.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="label">Recluster Now</div>
+    <div class="subtitle" style="margin-bottom:0.5rem;">Run this after a batch of new complaints comes in.</div>
+    <button id="reclusterBtn">Run Clustering</button>
+    <div id="clusterStatus" style="margin-top:0.5rem; font-size:0.85rem; color:var(--muted);"></div>
+  </div>
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

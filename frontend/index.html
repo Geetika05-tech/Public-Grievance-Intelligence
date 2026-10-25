@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Public Grievance Intelligence</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="active">Submit &amp; Analyze</a>
+  <a href="similarity.html">Similar Complaints</a>
+  <a href="dashboard.html">Admin Dashboard</a>
+</nav>
+
+<div class="container">
+  <h1>Public Grievance Intelligence</h1>
+  <div class="subtitle">Submit a complaint and let the NLP pipeline classify, extract, and route it.</div>
+
+  <div class="card">
+    <div class="label">Enter your complaint</div>
+    <textarea id="complaintText" placeholder="e.g. There has been no water supply in MVP Colony for four days..."></textarea>
+    <button id="analyzeBtn">Analyze Complaint</button>
+    <div id="errorMsg" class="error"></div>
+  </div>
+
+  <div class="card" id="resultCard" style="display:none;">
+    <div class="row">
+      <div class="field">
+        <div class="label">Category</div>
+        <div class="value" id="resCategory">-</div>
+      </div>
+      <div class="field">
+        <div class="label">Priority</div>
+        <div class="value"><span id="resUrgency" class="badge">-</span></div>
+      </div>
+      <div class="field">
+        <div class="label">Department</div>
+        <div class="value" id="resDepartment">-</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <div class="label">Location</div>
+        <div class="value" id="resLocation">-</div>
+      </div>
+      <div class="field">
+        <div class="label">Duration</div>
+        <div class="value" id="resDuration">-</div>
+      </div>
+      <div class="field">
+        <div class="label">Sentiment</div>
+        <div class="value" id="resSentiment">-</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="label">Summary</div>
+      <div class="value" id="resSummary">-</div>
+    </div>
+
+    <div class="field">
+      <div class="label">Key Phrases</div>
+      <div class="value" id="resKeyPhrases">-</div>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

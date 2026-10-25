@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Similar Complaints</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Submit &amp; Analyze</a>
+  <a href="similarity.html" class="active">Similar Complaints</a>
+  <a href="dashboard.html">Admin Dashboard</a>
+</nav>
+
+<div class="container">
+  <h1>Similar Complaints</h1>
+  <div class="subtitle">The most recently analyzed complaint, compared against everything already on file.</div>
+
+  <div class="card">
+    <div class="label">Your complaint</div>
+    <div class="value" id="yourComplaint">Submit a complaint on the first screen to see similar results here.</div>
+  </div>
+
+  <div class="card">
+    <div class="label">Similar complaints</div>
+    <div id="similarList"><div class="empty">No data yet.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <div class="field">
+        <div class="label">Issue Cluster</div>
+        <div class="value" id="clusterName">-</div>
+      </div>
+      <div class="field">
+        <div class="label">Total related complaints</div>
+        <div class="value" id="relatedCount">-</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/similarity.js"></script>
+</body>
+</html>
